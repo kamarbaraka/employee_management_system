@@ -15,8 +15,9 @@ public class EmployeeManagementSystemApplication {
     @Bean
     public CommandLineRunner run(EmployeeRepository repository){
         return (args -> {
-            insertJavaAdvocates(repository);
-            System.out.println(repository.findAll());
+            /*insertJavaAdvocates(repository);
+            System.out.println(repository.findAll());*/
+            System.out.println(repository.getEmployeeByFirstName("kamar"));
         });
     }
     public void insertJavaAdvocates(EmployeeRepository repository){
